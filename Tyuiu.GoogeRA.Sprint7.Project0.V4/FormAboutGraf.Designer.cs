@@ -54,6 +54,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.chartRes_GRA.Legends.Add(legend1);
             this.chartRes_GRA.Location = new System.Drawing.Point(3, 16);
             this.chartRes_GRA.Name = "chartRes_GRA";
+            this.chartRes_GRA.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.IsVisibleInLegend = false;
             series1.Legend = "Legend1";
@@ -87,6 +88,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             // 
             // buttonRes_GRA
             // 
+            this.buttonRes_GRA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRes_GRA.Location = new System.Drawing.Point(127, 14);
             this.buttonRes_GRA.Name = "buttonRes_GRA";
             this.buttonRes_GRA.Size = new System.Drawing.Size(98, 30);
@@ -97,12 +99,15 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             // 
             // buttonOK_GRA
             // 
+            this.buttonOK_GRA.BackColor = System.Drawing.Color.White;
+            this.buttonOK_GRA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOK_GRA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonOK_GRA.Location = new System.Drawing.Point(456, 306);
             this.buttonOK_GRA.Name = "buttonOK_GRA";
             this.buttonOK_GRA.Size = new System.Drawing.Size(106, 30);
             this.buttonOK_GRA.TabIndex = 0;
             this.buttonOK_GRA.Text = "ОК";
-            this.buttonOK_GRA.UseVisualStyleBackColor = true;
+            this.buttonOK_GRA.UseVisualStyleBackColor = false;
             this.buttonOK_GRA.Click += new System.EventHandler(this.buttonOK_GRA_Click);
             // 
             // groupBoxIndex_GRA
@@ -128,6 +133,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(580, 356);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(596, 395);

@@ -36,7 +36,8 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             // 
             // buttonOK_GRA
             // 
-            this.buttonOK_GRA.Location = new System.Drawing.Point(107, 129);
+            this.buttonOK_GRA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOK_GRA.Location = new System.Drawing.Point(407, 134);
             this.buttonOK_GRA.Name = "buttonOK_GRA";
             this.buttonOK_GRA.Size = new System.Drawing.Size(75, 23);
             this.buttonOK_GRA.TabIndex = 0;
@@ -47,9 +48,9 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             // labelHelp_GRA
             // 
             this.labelHelp_GRA.AutoSize = true;
-            this.labelHelp_GRA.Location = new System.Drawing.Point(23, 20);
+            this.labelHelp_GRA.Location = new System.Drawing.Point(17, 9);
             this.labelHelp_GRA.Name = "labelHelp_GRA";
-            this.labelHelp_GRA.Size = new System.Drawing.Size(242, 91);
+            this.labelHelp_GRA.Size = new System.Drawing.Size(479, 117);
             this.labelHelp_GRA.TabIndex = 1;
             this.labelHelp_GRA.Text = resources.GetString("labelHelp_GRA.Text");
             // 
@@ -57,9 +58,11 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 166);
+            this.ClientSize = new System.Drawing.Size(493, 169);
             this.Controls.Add(this.labelHelp_GRA);
             this.Controls.Add(this.buttonOK_GRA);
+            this.MaximumSize = new System.Drawing.Size(509, 208);
+            this.MinimumSize = new System.Drawing.Size(509, 208);
             this.Name = "FormAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поддержка";

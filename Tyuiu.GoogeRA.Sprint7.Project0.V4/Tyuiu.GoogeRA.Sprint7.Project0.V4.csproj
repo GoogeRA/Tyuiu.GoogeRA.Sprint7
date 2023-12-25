@@ -59,6 +59,12 @@
     <Compile Include="FormAboutGraf.Designer.cs">
       <DependentUpon>FormAboutGraf.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAboutInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAboutInfo.Designer.cs">
+      <DependentUpon>FormAboutInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <EmbeddedResource Include="FormAboutGraf.resx">
       <DependentUpon>FormAboutGraf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAboutInfo.resx">
+      <DependentUpon>FormAboutInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +93,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,6 +113,9 @@
       <Project>{42636b29-2957-4d78-afc2-d186f02ea510}</Project>
       <Name>Tyuiu.GoogeRA.Sprint7.Project0.V4.Lib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1-83408-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

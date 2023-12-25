@@ -41,6 +41,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
                         }
                     }
                 }
+                buttonSaveFile_GRA.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -110,11 +111,18 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
 
         private void dataGridViewLB_GRA_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            string indexStr = (index + 1).ToString();
-            object header = this.dataGridViewLB_GRA.Rows[index].HeaderCell.Value;
-            if (header == null || !header.Equals(indexStr))
-                this.dataGridViewLB_GRA.Rows[index].HeaderCell.Value = indexStr;
+            try
+            {
+                int index = e.RowIndex;
+                string indexStr = (index + 1).ToString();
+                object header = this.dataGridViewLB_GRA.Rows[index].HeaderCell.Value;
+                if (header == null || !header.Equals(indexStr))
+                    this.dataGridViewLB_GRA.Rows[index].HeaderCell.Value = indexStr;
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Промах!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void textBoxSearch_GRA_TextChanged(object sender, EventArgs e)
@@ -251,6 +259,11 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             return rows;
         }
 
+        private void buttonINFO_GRA_Click(object sender, EventArgs e)
+        {
+            FormAboutInfo formAboutinfo = new FormAboutInfo();
+            formAboutinfo.Show();
+        }
     }
     
     

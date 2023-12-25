@@ -30,26 +30,33 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
 
         private void buttonRes_GRA_Click(object sender, EventArgs e)
         {
-            chartRes_GRA.Series[0].Points.Clear();
-            int columnIndex = Convert.ToInt32(textBoxIndexCol_GRA.Text);
-            DataGridViewRowCollection rows = mainForm?.GetRows();
-            if (columnIndex > 3 && columnIndex < 7)
+            try
             {
-                
-                if (rows != null)
+                chartRes_GRA.Series[0].Points.Clear();
+                int columnIndex = Convert.ToInt32(textBoxIndexCol_GRA.Text);
+                DataGridViewRowCollection rows = mainForm?.GetRows();
+                if (columnIndex > 3 && columnIndex < 7)
                 {
-                    foreach (DataGridViewRow row in rows)
+
+                    if (rows != null)
                     {
-                        if (row.Cells[0].Value != null && int.TryParse(row.Cells[columnIndex].Value.ToString(), out int number))
+                        foreach (DataGridViewRow row in rows)
                         {
-                            chartRes_GRA.Series[0].Points.AddXY(row.Cells[0].Value.ToString(), number);
+                            if (row.Cells[0].Value != null && int.TryParse(row.Cells[columnIndex].Value.ToString(), out int number))
+                            {
+                                chartRes_GRA.Series[0].Points.AddXY(row.Cells[0].Value.ToString(), number);
+                            }
                         }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Неверный номер! Доступны: 4, 5, 6.");
+                }
             }
-            else
+            catch(Exception exc)
             {
-                MessageBox.Show("Неверный номер! Доступны: 4, 5, 6.");
+                MessageBox.Show(exc.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
