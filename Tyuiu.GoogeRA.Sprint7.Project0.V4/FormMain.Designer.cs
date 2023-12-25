@@ -56,6 +56,12 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.ColumnOst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSrok = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxMid_GRA = new System.Windows.Forms.GroupBox();
+            this.buttonAllB_GRA = new System.Windows.Forms.Button();
+            this.textBoxSumCol_GRA = new System.Windows.Forms.TextBox();
+            this.groupBoxCalcul_GRA = new System.Windows.Forms.GroupBox();
+            this.groupBoxRes = new System.Windows.Forms.GroupBox();
+            this.textBoxNumColumn_GRA = new System.Windows.Forms.TextBox();
+            this.groupBoxNumCol_GRA = new System.Windows.Forms.GroupBox();
             this.panelTop_GRA.SuspendLayout();
             this.groupBoxFile_GRA.SuspendLayout();
             this.panelMid_GRA.SuspendLayout();
@@ -64,6 +70,9 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.groupBoxRed_GRA.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBoxMid_GRA.SuspendLayout();
+            this.groupBoxCalcul_GRA.SuspendLayout();
+            this.groupBoxRes.SuspendLayout();
+            this.groupBoxNumCol_GRA.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop_GRA
@@ -73,7 +82,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.panelTop_GRA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_GRA.Location = new System.Drawing.Point(0, 0);
             this.panelTop_GRA.Name = "panelTop_GRA";
-            this.panelTop_GRA.Size = new System.Drawing.Size(842, 57);
+            this.panelTop_GRA.Size = new System.Drawing.Size(847, 57);
             this.panelTop_GRA.TabIndex = 0;
             // 
             // groupBoxFile_GRA
@@ -113,7 +122,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.panelMid_GRA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMid_GRA.Location = new System.Drawing.Point(0, 57);
             this.panelMid_GRA.Name = "panelMid_GRA";
-            this.panelMid_GRA.Size = new System.Drawing.Size(842, 393);
+            this.panelMid_GRA.Size = new System.Drawing.Size(847, 435);
             this.panelMid_GRA.TabIndex = 1;
             // 
             // dataGridViewLB_GRA
@@ -132,18 +141,19 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.dataGridViewLB_GRA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewLB_GRA.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewLB_GRA.Name = "dataGridViewLB_GRA";
-            this.dataGridViewLB_GRA.Size = new System.Drawing.Size(836, 374);
+            this.dataGridViewLB_GRA.Size = new System.Drawing.Size(841, 416);
             this.dataGridViewLB_GRA.TabIndex = 0;
             this.dataGridViewLB_GRA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLB_GRA_CellContentClick);
             // 
             // panelBot_GRA
             // 
+            this.panelBot_GRA.Controls.Add(this.groupBoxCalcul_GRA);
             this.panelBot_GRA.Controls.Add(this.groupBoxRed_GRA);
             this.panelBot_GRA.Controls.Add(this.groupBox1);
             this.panelBot_GRA.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBot_GRA.Location = new System.Drawing.Point(0, 350);
+            this.panelBot_GRA.Location = new System.Drawing.Point(0, 377);
             this.panelBot_GRA.Name = "panelBot_GRA";
-            this.panelBot_GRA.Size = new System.Drawing.Size(842, 100);
+            this.panelBot_GRA.Size = new System.Drawing.Size(847, 115);
             this.panelBot_GRA.TabIndex = 2;
             // 
             // groupBoxRed_GRA
@@ -153,7 +163,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.groupBoxRed_GRA.Controls.Add(this.buttonPS_GRA);
             this.groupBoxRed_GRA.Location = new System.Drawing.Point(4, 4);
             this.groupBoxRed_GRA.Name = "groupBoxRed_GRA";
-            this.groupBoxRed_GRA.Size = new System.Drawing.Size(226, 84);
+            this.groupBoxRed_GRA.Size = new System.Drawing.Size(155, 105);
             this.groupBoxRed_GRA.TabIndex = 1;
             this.groupBoxRed_GRA.TabStop = false;
             this.groupBoxRed_GRA.Text = "Редактирование таблицы";
@@ -165,9 +175,9 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.buttonClear_GRA);
             this.groupBox1.Controls.Add(this.textBoxSearch_GRA);
-            this.groupBox1.Location = new System.Drawing.Point(246, 3);
+            this.groupBox1.Location = new System.Drawing.Point(449, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 50);
+            this.groupBox1.Size = new System.Drawing.Size(386, 42);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поиск";
@@ -184,16 +194,16 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             // 
             this.textBoxSearch_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSearch_GRA.Location = new System.Drawing.Point(7, 20);
+            this.textBoxSearch_GRA.Location = new System.Drawing.Point(7, 16);
             this.textBoxSearch_GRA.Name = "textBoxSearch_GRA";
-            this.textBoxSearch_GRA.Size = new System.Drawing.Size(423, 20);
+            this.textBoxSearch_GRA.Size = new System.Drawing.Size(321, 20);
             this.textBoxSearch_GRA.TabIndex = 0;
             this.textBoxSearch_GRA.TextChanged += new System.EventHandler(this.textBoxSearch_GRA_TextChanged);
             // 
             // buttonClear_GRA
             // 
             this.buttonClear_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClear_GRA.Location = new System.Drawing.Point(436, 19);
+            this.buttonClear_GRA.Location = new System.Drawing.Point(334, 12);
             this.buttonClear_GRA.Name = "buttonClear_GRA";
             this.buttonClear_GRA.Size = new System.Drawing.Size(46, 24);
             this.buttonClear_GRA.TabIndex = 1;
@@ -224,7 +234,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             // buttonHelp_GRA
             // 
             this.buttonHelp_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHelp_GRA.Location = new System.Drawing.Point(756, 4);
+            this.buttonHelp_GRA.Location = new System.Drawing.Point(770, 10);
             this.buttonHelp_GRA.Name = "buttonHelp_GRA";
             this.buttonHelp_GRA.Size = new System.Drawing.Size(74, 41);
             this.buttonHelp_GRA.TabIndex = 1;
@@ -289,16 +299,72 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.groupBoxMid_GRA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxMid_GRA.Location = new System.Drawing.Point(0, 0);
             this.groupBoxMid_GRA.Name = "groupBoxMid_GRA";
-            this.groupBoxMid_GRA.Size = new System.Drawing.Size(842, 393);
+            this.groupBoxMid_GRA.Size = new System.Drawing.Size(847, 435);
             this.groupBoxMid_GRA.TabIndex = 0;
             this.groupBoxMid_GRA.TabStop = false;
             this.groupBoxMid_GRA.Text = "Таблица";
+            // 
+            // buttonAllB_GRA
+            // 
+            this.buttonAllB_GRA.Location = new System.Drawing.Point(6, 19);
+            this.buttonAllB_GRA.Name = "buttonAllB_GRA";
+            this.buttonAllB_GRA.Size = new System.Drawing.Size(71, 23);
+            this.buttonAllB_GRA.TabIndex = 3;
+            this.buttonAllB_GRA.Text = "Сумма";
+            this.buttonAllB_GRA.UseVisualStyleBackColor = true;
+            this.buttonAllB_GRA.Click += new System.EventHandler(this.buttonAllB_GRA_Click);
+            // 
+            // textBoxSumCol_GRA
+            // 
+            this.textBoxSumCol_GRA.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSumCol_GRA.Name = "textBoxSumCol_GRA";
+            this.textBoxSumCol_GRA.Size = new System.Drawing.Size(58, 20);
+            this.textBoxSumCol_GRA.TabIndex = 4;
+            // 
+            // groupBoxCalcul_GRA
+            // 
+            this.groupBoxCalcul_GRA.Controls.Add(this.groupBoxNumCol_GRA);
+            this.groupBoxCalcul_GRA.Controls.Add(this.groupBoxRes);
+            this.groupBoxCalcul_GRA.Controls.Add(this.buttonAllB_GRA);
+            this.groupBoxCalcul_GRA.Location = new System.Drawing.Point(165, 4);
+            this.groupBoxCalcul_GRA.Name = "groupBoxCalcul_GRA";
+            this.groupBoxCalcul_GRA.Size = new System.Drawing.Size(278, 105);
+            this.groupBoxCalcul_GRA.TabIndex = 5;
+            this.groupBoxCalcul_GRA.TabStop = false;
+            this.groupBoxCalcul_GRA.Text = "Калькулятор";
+            // 
+            // groupBoxRes
+            // 
+            this.groupBoxRes.Controls.Add(this.textBoxSumCol_GRA);
+            this.groupBoxRes.Location = new System.Drawing.Point(198, 55);
+            this.groupBoxRes.Name = "groupBoxRes";
+            this.groupBoxRes.Size = new System.Drawing.Size(74, 47);
+            this.groupBoxRes.TabIndex = 5;
+            this.groupBoxRes.TabStop = false;
+            this.groupBoxRes.Text = "Результат";
+            // 
+            // textBoxNumColumn_GRA
+            // 
+            this.textBoxNumColumn_GRA.Location = new System.Drawing.Point(6, 17);
+            this.textBoxNumColumn_GRA.Name = "textBoxNumColumn_GRA";
+            this.textBoxNumColumn_GRA.Size = new System.Drawing.Size(45, 20);
+            this.textBoxNumColumn_GRA.TabIndex = 4;
+            // 
+            // groupBoxNumCol_GRA
+            // 
+            this.groupBoxNumCol_GRA.Controls.Add(this.textBoxNumColumn_GRA);
+            this.groupBoxNumCol_GRA.Location = new System.Drawing.Point(210, 12);
+            this.groupBoxNumCol_GRA.Name = "groupBoxNumCol_GRA";
+            this.groupBoxNumCol_GRA.Size = new System.Drawing.Size(62, 45);
+            this.groupBoxNumCol_GRA.TabIndex = 6;
+            this.groupBoxNumCol_GRA.TabStop = false;
+            this.groupBoxNumCol_GRA.Text = "IndexC";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 450);
+            this.ClientSize = new System.Drawing.Size(847, 492);
             this.Controls.Add(this.panelBot_GRA);
             this.Controls.Add(this.panelMid_GRA);
             this.Controls.Add(this.panelTop_GRA);
@@ -314,6 +380,11 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBoxMid_GRA.ResumeLayout(false);
+            this.groupBoxCalcul_GRA.ResumeLayout(false);
+            this.groupBoxRes.ResumeLayout(false);
+            this.groupBoxRes.PerformLayout();
+            this.groupBoxNumCol_GRA.ResumeLayout(false);
+            this.groupBoxNumCol_GRA.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -347,6 +418,12 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOst;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSrok;
         private System.Windows.Forms.GroupBox groupBoxMid_GRA;
+        private System.Windows.Forms.TextBox textBoxSumCol_GRA;
+        private System.Windows.Forms.Button buttonAllB_GRA;
+        private System.Windows.Forms.GroupBox groupBoxCalcul_GRA;
+        private System.Windows.Forms.GroupBox groupBoxRes;
+        private System.Windows.Forms.TextBox textBoxNumColumn_GRA;
+        private System.Windows.Forms.GroupBox groupBoxNumCol_GRA;
     }
 }
 

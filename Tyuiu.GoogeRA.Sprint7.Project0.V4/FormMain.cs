@@ -195,6 +195,28 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
         {
             SubtractSelectedRows();
         }
+
+        private void buttonAllB_GRA_Click(object sender, EventArgs e)
+        {
+            int columnIndex;
+            if (int.TryParse(textBoxNumColumn_GRA.Text, out columnIndex))
+            {
+                int sum = 0;
+                foreach (DataGridViewRow row in dataGridViewLB_GRA.Rows)
+                {
+                    if (row.Cells[columnIndex].Value != null && int.TryParse(row.Cells[columnIndex].Value.ToString(), out int cellValue))
+                    {
+                        sum += cellValue;
+                    }
+                }
+                textBoxSumCol_GRA.Text = sum.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Неверный индекс столбца! Нумерация от 0!");
+            }
+
+        }
     }
     
     
