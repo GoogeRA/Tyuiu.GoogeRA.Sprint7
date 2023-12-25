@@ -30,23 +30,14 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
         private void InitializeComponent()
         {
             this.panelTop_GRA = new System.Windows.Forms.Panel();
+            this.buttonChart_GRA = new System.Windows.Forms.Button();
+            this.buttonHelp_GRA = new System.Windows.Forms.Button();
             this.groupBoxFile_GRA = new System.Windows.Forms.GroupBox();
             this.buttonSaveFile_GRA = new System.Windows.Forms.Button();
             this.buttonOpenFile_GRA = new System.Windows.Forms.Button();
             this.panelMid_GRA = new System.Windows.Forms.Panel();
+            this.groupBoxMid_GRA = new System.Windows.Forms.GroupBox();
             this.dataGridViewLB_GRA = new System.Windows.Forms.DataGridView();
-            this.panelBot_GRA = new System.Windows.Forms.Panel();
-            this.groupBoxRed_GRA = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.openFileDialogLB_GRA = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialogLB_GRA = new System.Windows.Forms.OpenFileDialog();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.textBoxSearch_GRA = new System.Windows.Forms.TextBox();
-            this.buttonClear_GRA = new System.Windows.Forms.Button();
-            this.buttonPS_GRA = new System.Windows.Forms.Button();
-            this.buttonDel_GRA = new System.Windows.Forms.Button();
-            this.buttonHelp_GRA = new System.Windows.Forms.Button();
-            this.buttonSubtract_GRA = new System.Windows.Forms.Button();
             this.ColumnNameB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEars = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,35 +46,67 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.ColumnDrop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnOst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSrok = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBoxMid_GRA = new System.Windows.Forms.GroupBox();
-            this.buttonAllB_GRA = new System.Windows.Forms.Button();
-            this.textBoxSumCol_GRA = new System.Windows.Forms.TextBox();
+            this.panelBot_GRA = new System.Windows.Forms.Panel();
             this.groupBoxCalcul_GRA = new System.Windows.Forms.GroupBox();
-            this.groupBoxRes = new System.Windows.Forms.GroupBox();
-            this.textBoxNumColumn_GRA = new System.Windows.Forms.TextBox();
             this.groupBoxNumCol_GRA = new System.Windows.Forms.GroupBox();
+            this.textBoxNumColumn_GRA = new System.Windows.Forms.TextBox();
+            this.groupBoxRes = new System.Windows.Forms.GroupBox();
+            this.textBoxSumCol_GRA = new System.Windows.Forms.TextBox();
+            this.buttonAllB_GRA = new System.Windows.Forms.Button();
+            this.groupBoxRed_GRA = new System.Windows.Forms.GroupBox();
+            this.buttonSubtract_GRA = new System.Windows.Forms.Button();
+            this.buttonDel_GRA = new System.Windows.Forms.Button();
+            this.buttonPS_GRA = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonClear_GRA = new System.Windows.Forms.Button();
+            this.textBoxSearch_GRA = new System.Windows.Forms.TextBox();
+            this.openFileDialogLB_GRA = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialogLB_GRA = new System.Windows.Forms.OpenFileDialog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelTop_GRA.SuspendLayout();
             this.groupBoxFile_GRA.SuspendLayout();
             this.panelMid_GRA.SuspendLayout();
+            this.groupBoxMid_GRA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLB_GRA)).BeginInit();
             this.panelBot_GRA.SuspendLayout();
+            this.groupBoxCalcul_GRA.SuspendLayout();
+            this.groupBoxNumCol_GRA.SuspendLayout();
+            this.groupBoxRes.SuspendLayout();
             this.groupBoxRed_GRA.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBoxMid_GRA.SuspendLayout();
-            this.groupBoxCalcul_GRA.SuspendLayout();
-            this.groupBoxRes.SuspendLayout();
-            this.groupBoxNumCol_GRA.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop_GRA
             // 
+            this.panelTop_GRA.Controls.Add(this.buttonChart_GRA);
             this.panelTop_GRA.Controls.Add(this.buttonHelp_GRA);
             this.panelTop_GRA.Controls.Add(this.groupBoxFile_GRA);
             this.panelTop_GRA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_GRA.Location = new System.Drawing.Point(0, 0);
             this.panelTop_GRA.Name = "panelTop_GRA";
-            this.panelTop_GRA.Size = new System.Drawing.Size(847, 57);
+            this.panelTop_GRA.Size = new System.Drawing.Size(848, 57);
             this.panelTop_GRA.TabIndex = 0;
+            // 
+            // buttonChart_GRA
+            // 
+            this.buttonChart_GRA.Location = new System.Drawing.Point(183, 10);
+            this.buttonChart_GRA.Name = "buttonChart_GRA";
+            this.buttonChart_GRA.Size = new System.Drawing.Size(75, 39);
+            this.buttonChart_GRA.TabIndex = 2;
+            this.buttonChart_GRA.Text = "Статистика";
+            this.buttonChart_GRA.UseVisualStyleBackColor = true;
+            this.buttonChart_GRA.Click += new System.EventHandler(this.buttonChart_GRA_Click);
+            // 
+            // buttonHelp_GRA
+            // 
+            this.buttonHelp_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_GRA.Location = new System.Drawing.Point(771, 10);
+            this.buttonHelp_GRA.Name = "buttonHelp_GRA";
+            this.buttonHelp_GRA.Size = new System.Drawing.Size(74, 41);
+            this.buttonHelp_GRA.TabIndex = 1;
+            this.buttonHelp_GRA.Text = "Поддержка";
+            this.buttonHelp_GRA.UseVisualStyleBackColor = true;
+            this.buttonHelp_GRA.Click += new System.EventHandler(this.buttonHelp_GRA_Click);
             // 
             // groupBoxFile_GRA
             // 
@@ -122,8 +145,19 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.panelMid_GRA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMid_GRA.Location = new System.Drawing.Point(0, 57);
             this.panelMid_GRA.Name = "panelMid_GRA";
-            this.panelMid_GRA.Size = new System.Drawing.Size(847, 435);
+            this.panelMid_GRA.Size = new System.Drawing.Size(848, 435);
             this.panelMid_GRA.TabIndex = 1;
+            // 
+            // groupBoxMid_GRA
+            // 
+            this.groupBoxMid_GRA.Controls.Add(this.dataGridViewLB_GRA);
+            this.groupBoxMid_GRA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxMid_GRA.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxMid_GRA.Name = "groupBoxMid_GRA";
+            this.groupBoxMid_GRA.Size = new System.Drawing.Size(848, 435);
+            this.groupBoxMid_GRA.TabIndex = 0;
+            this.groupBoxMid_GRA.TabStop = false;
+            this.groupBoxMid_GRA.Text = "Таблица";
             // 
             // dataGridViewLB_GRA
             // 
@@ -141,116 +175,9 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.dataGridViewLB_GRA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewLB_GRA.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewLB_GRA.Name = "dataGridViewLB_GRA";
-            this.dataGridViewLB_GRA.Size = new System.Drawing.Size(841, 416);
+            this.dataGridViewLB_GRA.Size = new System.Drawing.Size(842, 416);
             this.dataGridViewLB_GRA.TabIndex = 0;
             this.dataGridViewLB_GRA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLB_GRA_CellContentClick);
-            // 
-            // panelBot_GRA
-            // 
-            this.panelBot_GRA.Controls.Add(this.groupBoxCalcul_GRA);
-            this.panelBot_GRA.Controls.Add(this.groupBoxRed_GRA);
-            this.panelBot_GRA.Controls.Add(this.groupBox1);
-            this.panelBot_GRA.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBot_GRA.Location = new System.Drawing.Point(0, 377);
-            this.panelBot_GRA.Name = "panelBot_GRA";
-            this.panelBot_GRA.Size = new System.Drawing.Size(847, 115);
-            this.panelBot_GRA.TabIndex = 2;
-            // 
-            // groupBoxRed_GRA
-            // 
-            this.groupBoxRed_GRA.Controls.Add(this.buttonSubtract_GRA);
-            this.groupBoxRed_GRA.Controls.Add(this.buttonDel_GRA);
-            this.groupBoxRed_GRA.Controls.Add(this.buttonPS_GRA);
-            this.groupBoxRed_GRA.Location = new System.Drawing.Point(4, 4);
-            this.groupBoxRed_GRA.Name = "groupBoxRed_GRA";
-            this.groupBoxRed_GRA.Size = new System.Drawing.Size(155, 105);
-            this.groupBoxRed_GRA.TabIndex = 1;
-            this.groupBoxRed_GRA.TabStop = false;
-            this.groupBoxRed_GRA.Text = "Редактирование таблицы";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.buttonClear_GRA);
-            this.groupBox1.Controls.Add(this.textBoxSearch_GRA);
-            this.groupBox1.Location = new System.Drawing.Point(449, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(386, 42);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Поиск";
-            // 
-            // openFileDialogLB_GRA
-            // 
-            this.openFileDialogLB_GRA.FileName = "openFileDialogLB_GRA";
-            // 
-            // saveFileDialogLB_GRA
-            // 
-            this.saveFileDialogLB_GRA.FileName = "saveFileDialogLB_GRA";
-            // 
-            // textBoxSearch_GRA
-            // 
-            this.textBoxSearch_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSearch_GRA.Location = new System.Drawing.Point(7, 16);
-            this.textBoxSearch_GRA.Name = "textBoxSearch_GRA";
-            this.textBoxSearch_GRA.Size = new System.Drawing.Size(321, 20);
-            this.textBoxSearch_GRA.TabIndex = 0;
-            this.textBoxSearch_GRA.TextChanged += new System.EventHandler(this.textBoxSearch_GRA_TextChanged);
-            // 
-            // buttonClear_GRA
-            // 
-            this.buttonClear_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClear_GRA.Location = new System.Drawing.Point(334, 12);
-            this.buttonClear_GRA.Name = "buttonClear_GRA";
-            this.buttonClear_GRA.Size = new System.Drawing.Size(46, 24);
-            this.buttonClear_GRA.TabIndex = 1;
-            this.buttonClear_GRA.Text = "Очистьт";
-            this.buttonClear_GRA.UseVisualStyleBackColor = true;
-            this.buttonClear_GRA.Click += new System.EventHandler(this.buttonClear_GRA_Click);
-            // 
-            // buttonPS_GRA
-            // 
-            this.buttonPS_GRA.Location = new System.Drawing.Point(9, 19);
-            this.buttonPS_GRA.Name = "buttonPS_GRA";
-            this.buttonPS_GRA.Size = new System.Drawing.Size(34, 23);
-            this.buttonPS_GRA.TabIndex = 0;
-            this.buttonPS_GRA.Text = "+Str";
-            this.buttonPS_GRA.UseVisualStyleBackColor = true;
-            this.buttonPS_GRA.Click += new System.EventHandler(this.buttonPS_GRA_Click);
-            // 
-            // buttonDel_GRA
-            // 
-            this.buttonDel_GRA.Location = new System.Drawing.Point(49, 19);
-            this.buttonDel_GRA.Name = "buttonDel_GRA";
-            this.buttonDel_GRA.Size = new System.Drawing.Size(31, 23);
-            this.buttonDel_GRA.TabIndex = 1;
-            this.buttonDel_GRA.Text = "-Str";
-            this.buttonDel_GRA.UseVisualStyleBackColor = true;
-            this.buttonDel_GRA.Click += new System.EventHandler(this.buttonDel_GRA_Click);
-            // 
-            // buttonHelp_GRA
-            // 
-            this.buttonHelp_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHelp_GRA.Location = new System.Drawing.Point(770, 10);
-            this.buttonHelp_GRA.Name = "buttonHelp_GRA";
-            this.buttonHelp_GRA.Size = new System.Drawing.Size(74, 41);
-            this.buttonHelp_GRA.TabIndex = 1;
-            this.buttonHelp_GRA.Text = "Поддержка";
-            this.buttonHelp_GRA.UseVisualStyleBackColor = true;
-            this.buttonHelp_GRA.Click += new System.EventHandler(this.buttonHelp_GRA_Click);
-            // 
-            // buttonSubtract_GRA
-            // 
-            this.buttonSubtract_GRA.Location = new System.Drawing.Point(87, 18);
-            this.buttonSubtract_GRA.Name = "buttonSubtract_GRA";
-            this.buttonSubtract_GRA.Size = new System.Drawing.Size(61, 24);
-            this.buttonSubtract_GRA.TabIndex = 2;
-            this.buttonSubtract_GRA.Text = "Остаток";
-            this.buttonSubtract_GRA.UseVisualStyleBackColor = true;
-            this.buttonSubtract_GRA.Click += new System.EventHandler(this.buttonSubtract_GRA_Click);
             // 
             // ColumnNameB
             // 
@@ -293,33 +220,16 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.ColumnSrok.MinimumWidth = 12;
             this.ColumnSrok.Name = "ColumnSrok";
             // 
-            // groupBoxMid_GRA
+            // panelBot_GRA
             // 
-            this.groupBoxMid_GRA.Controls.Add(this.dataGridViewLB_GRA);
-            this.groupBoxMid_GRA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxMid_GRA.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxMid_GRA.Name = "groupBoxMid_GRA";
-            this.groupBoxMid_GRA.Size = new System.Drawing.Size(847, 435);
-            this.groupBoxMid_GRA.TabIndex = 0;
-            this.groupBoxMid_GRA.TabStop = false;
-            this.groupBoxMid_GRA.Text = "Таблица";
-            // 
-            // buttonAllB_GRA
-            // 
-            this.buttonAllB_GRA.Location = new System.Drawing.Point(6, 19);
-            this.buttonAllB_GRA.Name = "buttonAllB_GRA";
-            this.buttonAllB_GRA.Size = new System.Drawing.Size(71, 23);
-            this.buttonAllB_GRA.TabIndex = 3;
-            this.buttonAllB_GRA.Text = "Сумма";
-            this.buttonAllB_GRA.UseVisualStyleBackColor = true;
-            this.buttonAllB_GRA.Click += new System.EventHandler(this.buttonAllB_GRA_Click);
-            // 
-            // textBoxSumCol_GRA
-            // 
-            this.textBoxSumCol_GRA.Location = new System.Drawing.Point(6, 19);
-            this.textBoxSumCol_GRA.Name = "textBoxSumCol_GRA";
-            this.textBoxSumCol_GRA.Size = new System.Drawing.Size(58, 20);
-            this.textBoxSumCol_GRA.TabIndex = 4;
+            this.panelBot_GRA.Controls.Add(this.groupBoxCalcul_GRA);
+            this.panelBot_GRA.Controls.Add(this.groupBoxRed_GRA);
+            this.panelBot_GRA.Controls.Add(this.groupBox1);
+            this.panelBot_GRA.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBot_GRA.Location = new System.Drawing.Point(0, 377);
+            this.panelBot_GRA.Name = "panelBot_GRA";
+            this.panelBot_GRA.Size = new System.Drawing.Size(848, 115);
+            this.panelBot_GRA.TabIndex = 2;
             // 
             // groupBoxCalcul_GRA
             // 
@@ -333,15 +243,15 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.groupBoxCalcul_GRA.TabStop = false;
             this.groupBoxCalcul_GRA.Text = "Калькулятор";
             // 
-            // groupBoxRes
+            // groupBoxNumCol_GRA
             // 
-            this.groupBoxRes.Controls.Add(this.textBoxSumCol_GRA);
-            this.groupBoxRes.Location = new System.Drawing.Point(198, 55);
-            this.groupBoxRes.Name = "groupBoxRes";
-            this.groupBoxRes.Size = new System.Drawing.Size(74, 47);
-            this.groupBoxRes.TabIndex = 5;
-            this.groupBoxRes.TabStop = false;
-            this.groupBoxRes.Text = "Результат";
+            this.groupBoxNumCol_GRA.Controls.Add(this.textBoxNumColumn_GRA);
+            this.groupBoxNumCol_GRA.Location = new System.Drawing.Point(6, 48);
+            this.groupBoxNumCol_GRA.Name = "groupBoxNumCol_GRA";
+            this.groupBoxNumCol_GRA.Size = new System.Drawing.Size(62, 45);
+            this.groupBoxNumCol_GRA.TabIndex = 6;
+            this.groupBoxNumCol_GRA.TabStop = false;
+            this.groupBoxNumCol_GRA.Text = "IndexC";
             // 
             // textBoxNumColumn_GRA
             // 
@@ -350,41 +260,149 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             this.textBoxNumColumn_GRA.Size = new System.Drawing.Size(45, 20);
             this.textBoxNumColumn_GRA.TabIndex = 4;
             // 
-            // groupBoxNumCol_GRA
+            // groupBoxRes
             // 
-            this.groupBoxNumCol_GRA.Controls.Add(this.textBoxNumColumn_GRA);
-            this.groupBoxNumCol_GRA.Location = new System.Drawing.Point(210, 12);
-            this.groupBoxNumCol_GRA.Name = "groupBoxNumCol_GRA";
-            this.groupBoxNumCol_GRA.Size = new System.Drawing.Size(62, 45);
-            this.groupBoxNumCol_GRA.TabIndex = 6;
-            this.groupBoxNumCol_GRA.TabStop = false;
-            this.groupBoxNumCol_GRA.Text = "IndexC";
+            this.groupBoxRes.Controls.Add(this.textBoxSumCol_GRA);
+            this.groupBoxRes.Location = new System.Drawing.Point(198, 48);
+            this.groupBoxRes.Name = "groupBoxRes";
+            this.groupBoxRes.Size = new System.Drawing.Size(74, 47);
+            this.groupBoxRes.TabIndex = 5;
+            this.groupBoxRes.TabStop = false;
+            this.groupBoxRes.Text = "Результат";
+            // 
+            // textBoxSumCol_GRA
+            // 
+            this.textBoxSumCol_GRA.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSumCol_GRA.Name = "textBoxSumCol_GRA";
+            this.textBoxSumCol_GRA.Size = new System.Drawing.Size(58, 20);
+            this.textBoxSumCol_GRA.TabIndex = 4;
+            // 
+            // buttonAllB_GRA
+            // 
+            this.buttonAllB_GRA.Location = new System.Drawing.Point(6, 19);
+            this.buttonAllB_GRA.Name = "buttonAllB_GRA";
+            this.buttonAllB_GRA.Size = new System.Drawing.Size(71, 23);
+            this.buttonAllB_GRA.TabIndex = 3;
+            this.buttonAllB_GRA.Text = "Сумма";
+            this.buttonAllB_GRA.UseVisualStyleBackColor = true;
+            this.buttonAllB_GRA.Click += new System.EventHandler(this.buttonAllB_GRA_Click);
+            // 
+            // groupBoxRed_GRA
+            // 
+            this.groupBoxRed_GRA.Controls.Add(this.buttonSubtract_GRA);
+            this.groupBoxRed_GRA.Controls.Add(this.buttonDel_GRA);
+            this.groupBoxRed_GRA.Controls.Add(this.buttonPS_GRA);
+            this.groupBoxRed_GRA.Location = new System.Drawing.Point(4, 4);
+            this.groupBoxRed_GRA.Name = "groupBoxRed_GRA";
+            this.groupBoxRed_GRA.Size = new System.Drawing.Size(155, 108);
+            this.groupBoxRed_GRA.TabIndex = 1;
+            this.groupBoxRed_GRA.TabStop = false;
+            this.groupBoxRed_GRA.Text = "Редактирование таблицы";
+            // 
+            // buttonSubtract_GRA
+            // 
+            this.buttonSubtract_GRA.Location = new System.Drawing.Point(87, 18);
+            this.buttonSubtract_GRA.Name = "buttonSubtract_GRA";
+            this.buttonSubtract_GRA.Size = new System.Drawing.Size(61, 24);
+            this.buttonSubtract_GRA.TabIndex = 2;
+            this.buttonSubtract_GRA.Text = "Остаток";
+            this.buttonSubtract_GRA.UseVisualStyleBackColor = true;
+            this.buttonSubtract_GRA.Click += new System.EventHandler(this.buttonSubtract_GRA_Click);
+            // 
+            // buttonDel_GRA
+            // 
+            this.buttonDel_GRA.Location = new System.Drawing.Point(49, 19);
+            this.buttonDel_GRA.Name = "buttonDel_GRA";
+            this.buttonDel_GRA.Size = new System.Drawing.Size(31, 23);
+            this.buttonDel_GRA.TabIndex = 1;
+            this.buttonDel_GRA.Text = "-Str";
+            this.buttonDel_GRA.UseVisualStyleBackColor = true;
+            this.buttonDel_GRA.Click += new System.EventHandler(this.buttonDel_GRA_Click);
+            // 
+            // buttonPS_GRA
+            // 
+            this.buttonPS_GRA.Location = new System.Drawing.Point(9, 19);
+            this.buttonPS_GRA.Name = "buttonPS_GRA";
+            this.buttonPS_GRA.Size = new System.Drawing.Size(34, 23);
+            this.buttonPS_GRA.TabIndex = 0;
+            this.buttonPS_GRA.Text = "+Str";
+            this.buttonPS_GRA.UseVisualStyleBackColor = true;
+            this.buttonPS_GRA.Click += new System.EventHandler(this.buttonPS_GRA_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.buttonClear_GRA);
+            this.groupBox1.Controls.Add(this.textBoxSearch_GRA);
+            this.groupBox1.Location = new System.Drawing.Point(449, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(387, 42);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Поиск";
+            // 
+            // buttonClear_GRA
+            // 
+            this.buttonClear_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonClear_GRA.Location = new System.Drawing.Point(335, 12);
+            this.buttonClear_GRA.Name = "buttonClear_GRA";
+            this.buttonClear_GRA.Size = new System.Drawing.Size(46, 24);
+            this.buttonClear_GRA.TabIndex = 1;
+            this.buttonClear_GRA.Text = "Очистьт";
+            this.buttonClear_GRA.UseVisualStyleBackColor = true;
+            this.buttonClear_GRA.Click += new System.EventHandler(this.buttonClear_GRA_Click);
+            // 
+            // textBoxSearch_GRA
+            // 
+            this.textBoxSearch_GRA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSearch_GRA.Location = new System.Drawing.Point(7, 16);
+            this.textBoxSearch_GRA.Name = "textBoxSearch_GRA";
+            this.textBoxSearch_GRA.Size = new System.Drawing.Size(322, 20);
+            this.textBoxSearch_GRA.TabIndex = 0;
+            this.textBoxSearch_GRA.TextChanged += new System.EventHandler(this.textBoxSearch_GRA_TextChanged);
+            // 
+            // openFileDialogLB_GRA
+            // 
+            this.openFileDialogLB_GRA.FileName = "openFileDialogLB_GRA";
+            // 
+            // saveFileDialogLB_GRA
+            // 
+            this.saveFileDialogLB_GRA.FileName = "saveFileDialogLB_GRA";
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 492);
+            this.ClientSize = new System.Drawing.Size(848, 492);
             this.Controls.Add(this.panelBot_GRA);
             this.Controls.Add(this.panelMid_GRA);
             this.Controls.Add(this.panelTop_GRA);
+            this.MinimumSize = new System.Drawing.Size(864, 531);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Библиотека";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelTop_GRA.ResumeLayout(false);
             this.groupBoxFile_GRA.ResumeLayout(false);
             this.panelMid_GRA.ResumeLayout(false);
+            this.groupBoxMid_GRA.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLB_GRA)).EndInit();
             this.panelBot_GRA.ResumeLayout(false);
+            this.groupBoxCalcul_GRA.ResumeLayout(false);
+            this.groupBoxNumCol_GRA.ResumeLayout(false);
+            this.groupBoxNumCol_GRA.PerformLayout();
+            this.groupBoxRes.ResumeLayout(false);
+            this.groupBoxRes.PerformLayout();
             this.groupBoxRed_GRA.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBoxMid_GRA.ResumeLayout(false);
-            this.groupBoxCalcul_GRA.ResumeLayout(false);
-            this.groupBoxRes.ResumeLayout(false);
-            this.groupBoxRes.PerformLayout();
-            this.groupBoxNumCol_GRA.ResumeLayout(false);
-            this.groupBoxNumCol_GRA.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -424,6 +442,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
         private System.Windows.Forms.GroupBox groupBoxRes;
         private System.Windows.Forms.TextBox textBoxNumColumn_GRA;
         private System.Windows.Forms.GroupBox groupBoxNumCol_GRA;
+        private System.Windows.Forms.Button buttonChart_GRA;
     }
 }
 

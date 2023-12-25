@@ -19,10 +19,9 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
             InitializeComponent();
             openFileDialogLB_GRA.Filter = "Значения разделённые точками(*.csv)|*.csv|Все файлы(*.*)|*.*";
             saveFileDialogLB_GRA.Filter = "Значения разделённые точками(*.csv)|*.csv|Все файлы(*.*)|*.*";
+
         }
 
-        DataService ds = new DataService();
-        
 
         private void buttonOpenFile_GRA_Click(object sender, EventArgs e)
         {
@@ -119,7 +118,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
         }
 
         private void textBoxSearch_GRA_TextChanged(object sender, EventArgs e)
-        {
+        { 
             // Поиск по всем столбцам
             for (int i = 0; i < dataGridViewLB_GRA.Rows.Count - 1; i++)
             {
@@ -134,7 +133,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
                 dataGridViewLB_GRA.Rows[i].Visible = isVisible;
             }
         }
-
+        
         private void buttonClear_GRA_Click(object sender, EventArgs e)
         {
             textBoxSearch_GRA.Text = "";
@@ -152,8 +151,15 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
 
         private void buttonDel_GRA_Click(object sender, EventArgs e)
         {
-            var selectedRowIndex = dataGridViewLB_GRA.SelectedCells[0].RowIndex;
-            dataGridViewLB_GRA.Rows.RemoveAt(selectedRowIndex);
+            try
+            {
+                var selectedRowIndex = dataGridViewLB_GRA.SelectedCells[0].RowIndex;
+                dataGridViewLB_GRA.Rows.RemoveAt(selectedRowIndex);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonHelp_GRA_Click(object sender, EventArgs e)
@@ -199,24 +205,52 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
         private void buttonAllB_GRA_Click(object sender, EventArgs e)
         {
             int columnIndex;
-            if (int.TryParse(textBoxNumColumn_GRA.Text, out columnIndex))
+            try
             {
-                int sum = 0;
-                foreach (DataGridViewRow row in dataGridViewLB_GRA.Rows)
+                if (int.TryParse(textBoxNumColumn_GRA.Text, out columnIndex))
                 {
-                    if (row.Cells[columnIndex].Value != null && int.TryParse(row.Cells[columnIndex].Value.ToString(), out int cellValue))
+                    int sum = 0;
+                    foreach (DataGridViewRow row in dataGridViewLB_GRA.Rows)
                     {
-                        sum += cellValue;
+                        if (row.Cells[columnIndex].Value != null && int.TryParse(row.Cells[columnIndex].Value.ToString(), out int cellValue))
+                        {
+                            sum += cellValue;
+                        }
                     }
+                    textBoxSumCol_GRA.Text = sum.ToString();
                 }
-                textBoxSumCol_GRA.Text = sum.ToString();
             }
-            else
+            catch
             {
                 MessageBox.Show("Неверный индекс столбца! Нумерация от 0!");
             }
 
         }
+
+        private void buttonChart_GRA_Click(object sender, EventArgs e)
+        {
+
+            FormAboutGraf formAboutGraf = new FormAboutGraf(this);
+            formAboutGraf.Show();
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+   
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+        public DataGridViewRowCollection GetRows()
+        {
+            DataGridViewRowCollection rows = dataGridViewLB_GRA.Rows;
+            return rows;
+        }
+
     }
     
     
