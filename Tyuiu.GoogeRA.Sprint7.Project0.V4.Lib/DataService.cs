@@ -11,31 +11,16 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4.Lib
     {
         public string[,] LoadFromFileData(string filePath)
         {
-            // формируем таблицу
-            string fileDta = File.ReadAllText(filePath);
-            fileDta = fileDta.Replace('\n', '\r');
-            string[] lines = fileDta.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
-            if (lines.Length < 2)
+            string[] content = File.ReadAllLines(filePath);
+            string[,] table = new string[content.Length, content[0].Split(';').Length];
+            for (int i = 0; i < table.GetLength(0); i++)
             {
-                return null;
-            }
-
-            int rows, cols;
-            rows = lines.Length - 1;
-            cols = lines[0].Split(';').Length;
-
-            string[,] arrayValues = new string[rows, cols];
-
-            for (int i = 1; i < lines.Length; i++)
-            {
-                string[] line_r = lines[i].Split(';');
-                for (int j = 0; j < cols; j++)
+                for (int j = 0; j < table.GetLength(1); j++)
                 {
-                    arrayValues[i - 1, j] = Convert.ToString(line_r[j]);
+                    table[i, j] = content[i].Split(';')[j];
                 }
             }
-
-            return arrayValues;
+            return table;
         }
     }
     

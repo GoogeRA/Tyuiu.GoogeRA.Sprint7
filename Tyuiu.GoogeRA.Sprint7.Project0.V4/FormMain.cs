@@ -133,7 +133,7 @@ namespace Tyuiu.GoogeRA.Sprint7.Project0.V4
                 bool isVisible = false;
                 for (int j = 0; j < dataGridViewLB_GRA.Columns.Count; j++)
                 {
-                    if (dataGridViewLB_GRA[j, i].Value.ToString() == textBoxSearch_GRA.Text)
+                    if (dataGridViewLB_GRA[j, i].Value?.ToString() == textBoxSearch_GRA.Text)
                     {
                         isVisible = true;
                     }
